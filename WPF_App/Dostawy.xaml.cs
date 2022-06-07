@@ -16,21 +16,13 @@ using System.Windows.Shapes;
 namespace WPF_App
 {
     /// <summary>
-    /// Logika interakcji dla klasy MainWindow.xaml
+    /// Logika interakcji dla klasy Dostawy.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Dostawy : Page
     {
-        public MainWindow()
+        public Dostawy()
         {
             InitializeComponent();
-        }
-
-        private void ButtonDostawy(object sender, RoutedEventArgs e)
-        {
-            Dostawy dostawy = new Dostawy();
-            this.Visibility = Visibility.Hidden;
-            dostawy.ShowsNavigationUI = true;
-
         }
     }
 }
