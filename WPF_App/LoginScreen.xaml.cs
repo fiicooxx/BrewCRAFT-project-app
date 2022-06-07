@@ -26,6 +26,16 @@ namespace WPF_App
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            // --- Filip ---
+
+            //SqlConnection connection = new SqlConnection
+            //    (@"Data Source=...;Initial Catalog=...;Integrated Security=True");
+
+            // --- Sebastian ---
+
+            //SqlConnection connection = new SqlConnection
+            //   (@"Data Source=...;Initial Catalog=...;Integrated Security=True");
+
 
         }
     }
