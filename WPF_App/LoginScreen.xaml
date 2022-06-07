@@ -101,7 +101,7 @@
             </Grid>
             <Grid
                 Grid.Row="2">
-                <!--TODO: Center text-->
+                <!--Center text-->
                 <TextBox
                     BorderThickness="2"
                     HorizontalContentAlignment="Center"
@@ -124,7 +124,7 @@
             </Grid>
             <Grid
                 Grid.Row="4">
-                <!--TODO: Center text-->
+                <!--Center text-->
                 <PasswordBox
                     BorderThickness="2"
                     HorizontalContentAlignment="Center"

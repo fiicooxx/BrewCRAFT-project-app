@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ using System.Windows.Shapes;
 namespace WPF_App
 {
     /// <summary>
-    /// Logika interakcji dla klasy LoginScreen.xaml
+    /// Interaction logic for LoginScreen.xaml
     /// </summary>
     public partial class LoginScreen : Window
     {
@@ -28,15 +29,56 @@ namespace WPF_App
         {
             // --- Filip ---
 
-            //SqlConnection connection = new SqlConnection
-            //    (@"Data Source=...;Initial Catalog=...;Integrated Security=True");
+            SqlConnection connection = new SqlConnection
+                (@"Data Source=...;Initial Catalog=...;Integrated Security=True");
 
             // --- Sebastian ---
 
             //SqlConnection connection = new SqlConnection
             //   (@"Data Source=...;Initial Catalog=...;Integrated Security=True");
+            try
+            {
+                if (connection.State == ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+
+                // runs a query on connected database
+                string loginQuery = "SELECT (1) FROM DaneLogowania WHERE Login = @Login AND Haslo = @Haslo";
+                SqlCommand command = new SqlCommand(loginQuery, connection);
 
 
+                // declaring scalar variables
+                command.CommandType = CommandType.Text;
+                command.Parameters.AddWithValue("@Login", txtlogin.Text);
+                command.Parameters.AddWithValue("@Haslo", passbox.Password);
+
+                int count = Convert.ToInt32(command.ExecuteScalar());
+
+                // if the returned value equals 1 it means it matches the databsae record
+                // --> then move to the next window
+                if (count == 1)
+                {
+                    MainWindow BreweryControlPanel = new MainWindow();
+                    BreweryControlPanel.Show();
+
+                    // closing login screen
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid login or password!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                // closes the app
+                connection.Close();
+            }
         }
     }
 
