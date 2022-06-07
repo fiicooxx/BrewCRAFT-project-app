@@ -10,7 +10,6 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WPF_App
@@ -18,7 +17,7 @@ namespace WPF_App
     /// <summary>
     /// Logika interakcji dla klasy Dostawy.xaml
     /// </summary>
-    public partial class Dostawy : Page
+    public partial class Dostawy : Window
     {
         public Dostawy()
         {

@@ -29,7 +29,7 @@ namespace WPF_App
         {
             Dostawy dostawy = new Dostawy();
             this.Visibility = Visibility.Hidden;
-            dostawy.ShowsNavigationUI = true;
+            dostawy.Show();
 
         }
     }
