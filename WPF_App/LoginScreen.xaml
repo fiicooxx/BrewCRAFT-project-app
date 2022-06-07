@@ -104,6 +104,8 @@
                 <!--TODO: Center text-->
                 <TextBox
                     BorderThickness="2"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
                     Name="txtlogin"
                     FontSize="20">
                 </TextBox>
@@ -125,6 +127,8 @@
                 <!--TODO: Center text-->
                 <PasswordBox
                     BorderThickness="2"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
                     Name="passbox"
                     FontSize="20">
                 </PasswordBox>
