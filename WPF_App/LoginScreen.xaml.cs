@@ -72,6 +72,7 @@ namespace WPF_App
             }
             catch (Exception ex)
             {
+                //TODO: Messagebox icon
                 MessageBox.Show(ex.Message);
             }
             finally
