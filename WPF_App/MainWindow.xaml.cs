@@ -33,5 +33,11 @@ namespace WPF_App
 
         }
 
+        private void ButtonStanMagazynu(object sender, RoutedEventArgs e)
+        {
+            StanMagazynu stan = new StanMagazynu();
+            this.Visibility = Visibility.Hidden;
+            stan.Show();
+        }
     }
 }
