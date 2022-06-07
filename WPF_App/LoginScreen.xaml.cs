@@ -23,8 +23,7 @@ namespace WPF_App
         {
             InitializeComponent();
         }
-
-        private void txtLogin_TextChanged(object sender, TextChangedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
 
         }

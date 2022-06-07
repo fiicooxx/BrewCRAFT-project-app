@@ -7,12 +7,12 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Background="WhiteSmoke"
-        Title="LoginScreen" Height="525" Width="615">
+        Title="LoginScreen" Height="550" Width="615">
     <Window.Resources>
         <Style x:Key="primarybutton" TargetType="{x:Type Button}">
-            <Setter Property="MinWidth" Value="120"/>
+            <Setter Property="MinWidth" Value="100"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="Height" Value="40"/>
+            <Setter Property="Height" Value="60"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
             <Setter Property="Background" Value="DarkOliveGreen"/>
             <Setter Property="Foreground" Value="White"/>
@@ -23,7 +23,7 @@
                             x:Name = "bd"
                             Background="{TemplateBinding Background}"
                             BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="10">
+                            CornerRadius="20">
                             <ContentPresenter
                                 HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                 VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -43,8 +43,8 @@
 
         <!--Title-->
         <TextBlock
-            Margin="35,0"
-            FontSize="35"
+            Margin="25,0"
+            FontSize="30"
             HorizontalAlignment="Left"
             VerticalAlignment="Top">
             <Run
@@ -53,29 +53,32 @@
                 Text="CRAFT"
                 Foreground="DarkOliveGreen"/>
         </TextBlock>
-        
+
         <!--Login UI-->
         <Grid Grid.Row="1"
-              Width="400"
+              Width="350"
               HorizontalAlignment="Center"
-              VerticalAlignment="Center">
+              VerticalAlignment="Bottom" Height="450">
             <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
-                <!--User name-->
-                <RowDefinition Height="100"/>
-                <!--Email-->
-                <RowDefinition Height="100"/>
+                <RowDefinition Height="60"/>
+                <!--Title-->
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="75"/>
+                <!--USername-->
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="75"/>
                 <!--Password-->
                 <RowDefinition/>
                 <!--Button etc...-->
-                <RowDefinition Height="100"/>
-                
+                <RowDefinition Height="60"/>
+
             </Grid.RowDefinitions>
 
             <!--Welcome message-->
             <TextBlock
                 VerticalAlignment="Center"
-                FontSize="30">
+                HorizontalAlignment="Center"
+                FontSize="25">
                 <Run
                     FontWeight="SemiBold"
                     Text="Hello, "/><Run
@@ -84,45 +87,68 @@
                     FontWeight="Bold"
                     x:Name="userName"/>
             </TextBlock>
-            
+
             <!--Username-->
             <Grid
                 Grid.Row="1">
-                <TextBox
-                    Name="txtLogin"
-                    FontSize="20" TextChanged="txtLogin_TextChanged">
-                </TextBox>
+                <TextBlock
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Text="Username"
+                    FontSize="20"
+                    Foreground="DarkOliveGreen"
+                    FontWeight="SemiBold"/>
             </Grid>
-            
-            <!--Password-->
             <Grid
                 Grid.Row="2">
+                <TextBox
+                    BorderThickness="2"
+                    Name="txtlogin"
+                    FontSize="20">
+                </TextBox>
+            </Grid>
+
+            <!--Password-->
+            <Grid
+                Grid.Row="3">
+                <TextBlock
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Text="Password"
+                    FontSize="20"
+                    Foreground="DarkOliveGreen"
+                    FontWeight="SemiBold"/>
+            </Grid>
+            <Grid
+                Grid.Row="4">
                 <PasswordBox
+                    BorderThickness="2"
                     Name="passbox"
                     FontSize="20">
                 </PasswordBox>
             </Grid>
-            
+
+            <!--Login-->
             <Grid
-                Grid.Row="3"
-                Margin="10,0"
-                Height="60">
-                
-                <!--Login-->
+                Grid.Row="5"
+                Margin="10,0,10,22"
+                Height="100">
+
+                <!--Login Button-->
                 <Button
-                Grid.Column="3"
+                Grid.Column="6"
                 Content="Login"
                 Click="Button_Click"
                 Style="{StaticResource primarybutton}"/>
             </Grid>
-            
+
             <!--Note-->
             <TextBlock
                     VerticalAlignment="Top"
                     TextWrapping="Wrap"
                     TextAlignment="Center"
                     Foreground="#a3a3a4"
-                    FontWeight="SemiBold" Margin="10,58,10,0" Grid.Row="4"><Run
+                    FontWeight="SemiBold" Margin="10,5,10,0" Grid.Row="6"><Run
                         Text="Do not show your login, password and verificaton code 
                         to anyone. We will never ask for your credentials!"/>
             </TextBlock>
