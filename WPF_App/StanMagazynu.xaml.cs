@@ -18,11 +18,18 @@ namespace WPF_App
     /// <summary>
     /// Logika interakcji dla klasy StanMagazynu.xaml
     /// </summary>
-    public partial class StanMagazynu : Page
+    public partial class StanMagazynu : Window
     {
         public StanMagazynu()
         {
             InitializeComponent();
+        }
+
+        private void ButtonStronaGłówna(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            this.Visibility = Visibility.Hidden;
+            main.Show();
         }
     }
 }

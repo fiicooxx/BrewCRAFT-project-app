@@ -32,5 +32,6 @@ namespace WPF_App
             dostawy.Show();
 
         }
+
     }
 }

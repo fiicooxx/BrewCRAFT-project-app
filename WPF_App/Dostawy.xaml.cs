@@ -23,5 +23,12 @@ namespace WPF_App
         {
             InitializeComponent();
         }
+
+        private void ButtonStronaGłówna(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            this.Visibility = Visibility.Hidden;
+            main.Show();
+        }
     }
 }
