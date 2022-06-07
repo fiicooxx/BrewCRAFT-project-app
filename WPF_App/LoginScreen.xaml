@@ -101,6 +101,7 @@
             </Grid>
             <Grid
                 Grid.Row="2">
+                <!--TODO: Center text-->
                 <TextBox
                     BorderThickness="2"
                     Name="txtlogin"
@@ -121,6 +122,7 @@
             </Grid>
             <Grid
                 Grid.Row="4">
+                <!--TODO: Center text-->
                 <PasswordBox
                     BorderThickness="2"
                     Name="passbox"
