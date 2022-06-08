@@ -7,8 +7,50 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="Dostawy" Height="450" Width="800">
-    <Grid>
-        <Button Content="Strona główna" Height="34" Margin="239,387,0,0" VerticalAlignment="Top" Width="301" HorizontalAlignment="Left" Click="ButtonStronaGłówna"/>
+    <Grid Margin="15 15 15 15">
+
+        <!--Title-->
+        <TextBlock
+            Margin="25,0"
+            FontSize="30"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top">
+            <Run
+                Text="Dostawy"
+                FontWeight="SemiBold"
+                Foreground="DarkOliveGreen"/>
+        </TextBlock>
+
+        <!--ID-->
+        <TextBox
+            Margin="0,86,551,285"
+            BorderThickness="2"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Name="txtlogin"
+            FontSize="20"
+            Text="ID"
+            Foreground="LightGray"
+            GotFocus="TextBox_GotFocus"
+            LostFocus="TextBox_LostFocus">
+        </TextBox>
+        <!--Piwo ID-->
+        <!--Dostawa ID-->
+        <!--Data Zamowienia-->
+        <!--Ilość-->
+        <!--Status ID-->
+        <!--Button ADD-->
+        <!--Button CHANGE-->
+        <!--Button Home-->
+        <Button 
+            Content="Home" 
+            Margin="5"
+            Height="40" 
+            Width="150"
+            VerticalAlignment="Top" 
+            HorizontalAlignment="Left" 
+            Click="ButtonStronaGłówna"/>
 
     </Grid>
 </Window>
+
