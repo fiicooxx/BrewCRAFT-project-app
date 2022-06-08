@@ -39,11 +39,38 @@
             </Setter>
         </Style>
         <Style x:Key="homebutton" TargetType="{x:Type Button}">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Background" Value="WhiteSmoke"/>
+            
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border
+                            x:Name = "bd"
+                            Background="{TemplateBinding Background}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="360">
+                            <ContentPresenter
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                TextBlock.Foreground="{TemplateBinding Foreground}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bd" Property="Background" Value="#EFFBFF"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="removebutton" TargetType="{x:Type Button}">
             <Setter Property="MinWidth" Value="100"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Height" Value="60"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
-            <Setter Property="Background" Value="DarkOliveGreen"/>
+            <Setter Property="Background" Value="#A14033"/>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="Template">
                 <Setter.Value>
@@ -60,7 +87,7 @@
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="bd" Property="Background" Value="#87863E"/>
+                                <Setter TargetName="bd" Property="Background" Value="#B0432A"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -187,17 +214,23 @@
             Height="40" Margin="548,222,42,0"
             Style="{StaticResource custombutton}" VerticalAlignment="Top"/>
 
-        <!--Button Home-->
-        <Button 
-            Name="btnhome"
-            Content="Home" 
-            Margin="628,7,0,0"
-            Height="40" 
-            Width="90"
-            VerticalAlignment="Top" 
-            HorizontalAlignment="Left" 
-            Click="ButtonStronaGłówna"
-            Style="{StaticResource custombutton}"/>
+        <!--Button REMOVE-->
+        <Button
+            Name="btnrmv"
+            Content="Usuń"
+            Height="40" Margin="548,272,42,0"
+            Style="{StaticResource removebutton}" VerticalAlignment="Top"/>
 
+        <!--Button Home-->
+        <Button           
+            Name="btnhome"          
+            Height="40" 
+            Width="40"
+            VerticalAlignment="Top" 
+            HorizontalAlignment="Right" 
+            Click="ButtonStronaGłówna"
+            Style="{StaticResource homebutton}">
+            <Image Source="Images/homebutton.jpg"/>
+        </Button>
     </Grid>
 </Window>
