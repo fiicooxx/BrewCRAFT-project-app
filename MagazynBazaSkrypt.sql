@@ -31,7 +31,7 @@ CREATE TABLE [dbo].[Dostawy](
 	[DostawcaID] [int] NOT NULL FOREIGN KEY REFERENCES Dostawcy(ID),
 	[DataZamowienia] [datetime] NOT NULL,
 	[Ilosc] [int] NOT NULL,
-	[StatusID] [nvarchar] (50) NOT NULL)
+	[StatusID] [int] NOT NULL FOREIGN KEY REFERENCES StatusDostawy(ID))
 
 INSERT INTO DaneLogowania VALUES 
 ('login', 'haslo')
@@ -44,14 +44,14 @@ INSERT INTO StanMagazynu VALUES
 ('Hazy Morning', 'American Pale IPA', 'Butelka', 30)
 
 INSERT INTO Dostawcy VALUES
-('FifiHurt', '¯ywiec', '665789763', 'fifihurt@gmail.com'),
-('SeBrowar', 'Kraków', '786543123', 'sebrowar@gmail.com'),
+('FifiHurt', 'Zywiec', '665789763', 'fifihurt@gmail.com'),
+('SeBrowar', 'Krakow', '786543123', 'sebrowar@gmail.com'),
 ('HurTom', 'Warszawa', '589654123', 'hurtom@gmail.com'),
 ('DobryBrowar', 'Mszana', '678901345', 'dobrybrowar@gmail.com'),
-('Chmielski', 'Kraków', '578900112', 'chmielski@gmail.com')
+('Chmielski', 'KrakÃ³w', '578900112', 'chmielski@gmail.com')
 
 INSERT INTO StatusDostawy VALUES
-('Przyjêta'),
+('Przyjeta'),
 ('Realizowana')
 
 INSERT INTO Dostawy VALUES
@@ -60,4 +60,6 @@ INSERT INTO Dostawy VALUES
 (3, 3, '2022-06-05', 20, 1),
 (4, 4, '2022-06-05', 25, 1),
 (5, 5, '2022-06-05', 30, 1)
+
+
 
