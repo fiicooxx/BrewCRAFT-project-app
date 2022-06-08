@@ -80,7 +80,6 @@ namespace WPF_App
                 connection.Close();
             }
         }
-
     }
 
 }
