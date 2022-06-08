@@ -43,7 +43,7 @@ namespace WPF_App
             TextBox box = sender as TextBox;
             if (box.Text.Trim().Equals(string.Empty))
             {
-                box.Text = "Search...";
+                box.Text = "...";
                 box.Foreground = Brushes.LightGray;
                 box.GotFocus += TextBox_GotFocus;
             }

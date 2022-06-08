@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data;
 
 namespace WPF_App
 {
@@ -22,6 +24,7 @@ namespace WPF_App
         public Zamowienia()
         {
             InitializeComponent();
+            FillComboBox();
         }
         private void ButtonStronaGłówna(object sender, RoutedEventArgs e)
         {
@@ -42,9 +45,104 @@ namespace WPF_App
             TextBox box = sender as TextBox;
             if (box.Text.Trim().Equals(string.Empty))
             {
-                box.Text = "Search...";
+                box.Text = "...";
                 box.Foreground = Brushes.LightGray;
                 box.GotFocus += TextBox_GotFocus;
+            }
+        }
+
+        // -------------------------------------------------- //
+        public void FillComboBox()
+        {
+            // here we are going to fill combobox with data
+            // in our case it is ID of order
+
+            // --- Filip ---
+
+            SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-FOQ5J3H;Initial Catalog=Magazyn;Integrated Security=True");
+
+            // --- Sebastian ---
+
+            // SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-A0MV0IO4;Initial Catalog=Magazyn;Integrated Security=True");
+
+            try
+            {
+                if (connection.State == ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                string query = "SELECT ID FROM Dostawy";
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+
+                // assign datasource to the combobox using datatable
+                comboid.ItemsSource = table.DefaultView;
+                comboid.DisplayMemberPath = "ID";
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Something went wrong :(");
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        // -------------------------------------------------- //
+        private void FullCombo(object sender, EventArgs e)
+        {
+            // here we are going to fill rest of records 
+            // relying on our ID
+
+            // here we are going to fill combobox with data
+            // in our case it is ID of order
+
+            // --- Filip ---
+
+            SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-FOQ5J3H;Initial Catalog=Magazyn;Integrated Security=True");
+
+            // --- Sebastian ---
+
+            // SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-A0MV0IO4;Initial Catalog=Magazyn;Integrated Security=True");
+
+            try
+            {
+                if (connection.State == ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                string query = $"SELECT DataZamowienia FROM Dostawy WHERE ID = {comboid.Text}";
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataReader sqlDataReader = command.ExecuteReader();
+
+                while (sqlDataReader.Read())
+                {
+                    //string piwoID = sqlDataReader.GetInt32(1).ToString();
+                    //string DostawcaID = sqlDataReader.GetInt32(2).ToString();
+                    string DataZamowienia = sqlDataReader.GetDateTime(4).ToString();
+                    //string Ilosc = sqlDataReader.GetInt32(4).ToString();
+                    //string Status = sqlDataReader.GetInt32(5).ToString();
+
+                    //txtpiwoid.Text = piwoID;
+                    //txtdostawcaid.Text = DostawcaID;
+                    txtdata.Text = DataZamowienia;
+                    //txtilosc.Text = Ilosc;
+                    //txtstatus.Text = Status;
+                }
+
+                sqlDataReader.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Whooops!");
+            }
+            finally
+            {
+                connection.Close();
             }
         }
     }

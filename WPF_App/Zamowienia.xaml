@@ -89,25 +89,26 @@
             FontSize="30"
             HorizontalAlignment="Center">
             <Run
-                Text="Dodaj "/><Run
+                Text="Wyświetl "/><Run
                 Text="zamówienie"
                 FontWeight="SemiBold"
                 Foreground="DarkOliveGreen"/>
         </TextBlock>
 
         <!--ID-->
-        <TextBox
+        <ComboBox
+            IsEditable="True"
+            IsReadOnly="True"
             Margin="80,140,470,250"
             BorderThickness="2"
             HorizontalContentAlignment="Center"
             VerticalContentAlignment="Center"
-            Name="txtid"
+            Name="comboid"
             FontSize="18"
-            Text="ID"
-            Foreground="DarkGray"
-            GotFocus="TextBox_GotFocus"
-            LostFocus="TextBox_LostFocus">
-        </TextBox>
+            Text="SELECT ID"
+            DropDownClosed="FullCombo"
+            Foreground="DarkGray">
+        </ComboBox>
 
         <!--Piwo ID-->
         <TextBox
@@ -179,10 +180,10 @@
             LostFocus="TextBox_LostFocus">
         </TextBox>
 
-        <!--Button ADD-->
+        <!--Button CHANGE-->
         <Button
-            Name="btnadd"
-            Content="Dodaj"
+            Name="btnchng"
+            Content="Zrealizuj"
             Height="40" Margin="548,222,42,0"
             Style="{StaticResource custombutton}" VerticalAlignment="Top"/>
 
