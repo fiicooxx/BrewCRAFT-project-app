@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPF_App"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Dostawy" Height="450" Width="800">
+        Title="Dostawy" Height="450" Width="700">
     <Grid Margin="15 15 15 15">
 
         <!--Title-->
@@ -23,30 +23,107 @@
 
         <!--ID-->
         <TextBox
-            Margin="0,86,551,285"
+            Margin="80,130,440,230"
             BorderThickness="2"
             HorizontalContentAlignment="Center"
             VerticalContentAlignment="Center"
-            Name="txtlogin"
-            FontSize="20"
+            Name="txtid"
+            FontSize="18"
             Text="ID"
-            Foreground="LightGray"
+            Foreground="DarkGray"
             GotFocus="TextBox_GotFocus"
             LostFocus="TextBox_LostFocus">
         </TextBox>
+
         <!--Piwo ID-->
+        <TextBox
+            Margin="80,190,440,169"
+            BorderThickness="2"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Name="txtpiwoid"
+            FontSize="18"
+            Text="Piwo"
+            Foreground="DarkGray"
+            GotFocus="TextBox_GotFocus"
+            LostFocus="TextBox_LostFocus">
+        </TextBox>
+
         <!--Dostawa ID-->
+        <TextBox
+            Margin="80,250,440,105"
+            BorderThickness="2"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Name="txtdostawcaid"
+            FontSize="18"
+            Text="Dostawca"
+            Foreground="DarkGray"
+            GotFocus="TextBox_GotFocus"
+            LostFocus="TextBox_LostFocus">
+        </TextBox>
+
         <!--Data Zamowienia-->
+        <TextBox
+            Margin="255,130,265,230"
+            BorderThickness="2"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Name="txtdata"
+            FontSize="16"
+            Text="RRRR-MM-DD"
+            Foreground="DarkGray"
+            GotFocus="TextBox_GotFocus"
+            LostFocus="TextBox_LostFocus">
+        </TextBox>
+
         <!--Ilość-->
+        <TextBox
+            Margin="255,191,265,169"
+            BorderThickness="2"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Name="txtilosc"
+            FontSize="18"
+            Text="Ilość"
+            Foreground="DarkGray"
+            GotFocus="TextBox_GotFocus"
+            LostFocus="TextBox_LostFocus">
+        </TextBox>
+
         <!--Status ID-->
+        <TextBox
+            Margin="255,252,265,107"
+            BorderThickness="2"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Name="txtstatus"
+            FontSize="18"
+            Text="Status"
+            Foreground="DarkGray"
+            GotFocus="TextBox_GotFocus"
+            LostFocus="TextBox_LostFocus">
+        </TextBox>
+
         <!--Button ADD-->
+        <Button
+            Name="btnadd"
+            Content="Dodaj zamówienie"
+            Height="40" Margin="468,275,68,89"/>
+
         <!--Button CHANGE-->
+        <Button
+            Name="btnchng"
+            Content="Change status"
+            Height="40" Margin="468,339,68,25"/>
+
         <!--Button Home-->
         <Button 
+            Name="btnhome"
             Content="Home" 
-            Margin="5"
+            Margin="5,5,0,0"
             Height="40" 
-            Width="150"
+            Width="90"
             VerticalAlignment="Top" 
             HorizontalAlignment="Left" 
             Click="ButtonStronaGłówna"/>
