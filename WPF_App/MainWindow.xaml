@@ -11,7 +11,8 @@
     <Grid>
         <Button Content="Stan Magazynu" Height="34" Margin="248,110,0,0" VerticalAlignment="Top" Width="301" HorizontalAlignment="Left" Click="ButtonStanMagazynu"/>
         <Button Content="Dostawy" Height="34" Margin="240,205,0,0" VerticalAlignment="Top" Width="301" HorizontalAlignment="Left" Click="ButtonDostawy"/>
-        <Button Content="Dostawcy" HorizontalAlignment="Left" Height="30" Margin="240,275,0,0" VerticalAlignment="Top" Width="310" Click="Button_Click"/>
+        <Button Content="Dostawcy" HorizontalAlignment="Left" Height="30" Margin="240,275,0,0" VerticalAlignment="Top" Width="310" Click="ButtonDostawcy"/>
+        <Button Content="Zamowienia" HorizontalAlignment="Left" Height="30" Margin="239,334,0,0" VerticalAlignment="Top" Width="310" Click="ButtonZamowienia"/>
 
     </Grid>
 

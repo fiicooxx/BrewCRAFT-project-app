@@ -75,6 +75,9 @@
     <Compile Include="StanMagazynu.xaml.cs">
       <DependentUpon>StanMagazynu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Zamowienia.xaml.cs">
+      <DependentUpon>Zamowienia.xaml</DependentUpon>
+    </Compile>
     <Page Include="Dostawcy.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -103,6 +106,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="StanMagazynu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Zamowienia.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

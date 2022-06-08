@@ -40,11 +40,17 @@ namespace WPF_App
             stan.Show();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ButtonDostawcy(object sender, RoutedEventArgs e)
         {
             Dostawcy dostawcy = new Dostawcy();
             this.Visibility = Visibility.Hidden;
             dostawcy.Show();
+        }
+        private void ButtonZamowienia(object sender, RoutedEventArgs e)
+        {
+            Zamowienia zamowienia= new Zamowienia();
+            this.Visibility = Visibility.Hidden;
+            zamowienia.Show();
         }
     }
 }
