@@ -8,5 +8,8 @@ namespace WPF_App.Models
 {
     internal class StanDostawy
     {
+        public int ID { get; set; }
+        public string Nazwa { get; set; }
+
     }
 }
