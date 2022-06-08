@@ -10,7 +10,9 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button Content="Stan Magazynu" Height="34" Margin="248,110,0,0" VerticalAlignment="Top" Width="301" HorizontalAlignment="Left" Click="ButtonStanMagazynu"/>
-        <Button Content="Dostawy" Height="34" Margin="248,268,0,0" VerticalAlignment="Top" Width="301" HorizontalAlignment="Left" Click="ButtonDostawy"/>
+        <Button Content="Dostawy" Height="34" Margin="240,205,0,0" VerticalAlignment="Top" Width="301" HorizontalAlignment="Left" Click="ButtonDostawy"/>
+        <Button Content="Dostawcy" HorizontalAlignment="Left" Height="30" Margin="240,275,0,0" VerticalAlignment="Top" Width="310" Click="Button_Click"/>
 
     </Grid>
+
 </Window>

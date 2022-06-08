@@ -56,6 +56,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Dostawcy.xaml.cs">
+      <DependentUpon>Dostawcy.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Dostawy.xaml.cs">
       <DependentUpon>Dostawy.xaml</DependentUpon>
     </Compile>
@@ -72,6 +75,10 @@
     <Compile Include="StanMagazynu.xaml.cs">
       <DependentUpon>StanMagazynu.xaml</DependentUpon>
     </Compile>
+    <Page Include="Dostawcy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Dostawy.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

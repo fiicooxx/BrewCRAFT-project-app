@@ -9,9 +9,9 @@
         ResizeMode="NoResize"
         Title="StanMagazynu" Height="450" Width="800">
     <Grid>
-        <Button Content="Strona główna" Height="34" Margin="239,387,0,0" VerticalAlignment="Top" Width="301" HorizontalAlignment="Left" Click="ButtonStronaGłówna"/>
-        <DataGrid x:Name="datagrid" HorizontalAlignment="Left" Height="243" Margin="79,62,0,0" VerticalAlignment="Top" Width="561" d:ItemsSource="{d:SampleData ItemCount=5}"/>
-        <Button Content="Załaduj" x:Name="Odśwież" HorizontalAlignment="Left" Height="56" Margin="242,312,0,0" VerticalAlignment="Top" Width="297" Click="Odśwież_Click"/>
+        <Button Content="Strona główna" Height="34" Margin="239,356,0,0" VerticalAlignment="Top" Width="301" HorizontalAlignment="Left" Click="ButtonStronaGłówna"/>
+        <DataGrid x:Name="datagrid" HorizontalAlignment="Center" Height="141" Margin="0,61,0,0" VerticalAlignment="Top" Width="418" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <Button Content="Załaduj" x:Name="Odśwież" HorizontalAlignment="Left" Height="56" Margin="242,254,0,0" VerticalAlignment="Top" Width="297" Click="Odśwież_Click"/>
 
     </Grid>
 </Window>

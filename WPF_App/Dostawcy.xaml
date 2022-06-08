@@ -1,0 +1,29 @@
+﻿<Window x:Class="WPF_App.Dostawcy"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_App"
+        mc:Ignorable="d"
+        Title="Dostawcy" Height="450" Width="800">
+    <Grid>
+        <Button Content="Strona główna" Height="34" Margin="239,356,0,0" VerticalAlignment="Top" Width="301" HorizontalAlignment="Left" Click="ButtonStronaGłówna"/>
+        <DataGrid x:Name="datagrid" HorizontalAlignment="Left" Height="141" Margin="204,33,0,0" VerticalAlignment="Top" Width="418" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <Button Content="Załaduj" x:Name="Odśwież" HorizontalAlignment="Left" Height="56" Margin="247,194,0,0" VerticalAlignment="Top" Width="297" Click="Odśwież_Click" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.211"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <TextBlock Margin="335,271,357,-277" FontSize="20">  
+         
+    <Hyperlink NavigateUri="https://mail.google.com/mail/u/2/#inbox?compose=new" RequestNavigate="Hyperlink_RequestNavigate">
+        Wyślij maila
+    </Hyperlink>
+        </TextBlock>
+    </Grid>
+</Window>
