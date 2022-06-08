@@ -6,17 +6,91 @@
         xmlns:local="clr-namespace:WPF_App"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Dostawy" Height="450" Width="700">
+        ResizeMode="NoResize" Height="450" Width="700"
+        Title="Dostawy">
+    <Window.Resources>
+        <Style x:Key="custombutton" TargetType="{x:Type Button}">
+            <Setter Property="MinWidth" Value="100"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Height" Value="60"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Background" Value="DarkOliveGreen"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border
+                            x:Name = "bd"
+                            Background="{TemplateBinding Background}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="20">
+                            <ContentPresenter
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                TextBlock.Foreground="{TemplateBinding Foreground}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bd" Property="Background" Value="#87863E"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="homebutton" TargetType="{x:Type Button}">
+            <Setter Property="MinWidth" Value="100"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Height" Value="60"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Background" Value="DarkOliveGreen"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border
+                            x:Name = "bd"
+                            Background="{TemplateBinding Background}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="20">
+                            <ContentPresenter
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                TextBlock.Foreground="{TemplateBinding Foreground}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bd" Property="Background" Value="#87863E"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid Margin="15 15 15 15">
 
-        <!--Title-->
+        <!--Main title-->
         <TextBlock
             Margin="25,0"
             FontSize="30"
-            HorizontalAlignment="Center"
+            HorizontalAlignment="Left"
             VerticalAlignment="Top">
             <Run
-                Text="Dostawy"
+                Text="Brew"/><Run
+                FontWeight="Bold"
+                Text="CRAFT"
+                Foreground="DarkOliveGreen"/>
+        </TextBlock>
+
+        <!--Title-->
+        <TextBlock
+            Margin="0,50,0,-20"
+            FontSize="30"
+            HorizontalAlignment="Center">
+            <Run
+                Text="Zarządzaj "/><Run
+                Text="dostawami"
                 FontWeight="SemiBold"
                 Foreground="DarkOliveGreen"/>
         </TextBlock>
@@ -109,24 +183,27 @@
         <Button
             Name="btnadd"
             Content="Dodaj zamówienie"
-            Height="40" Margin="468,275,68,89"/>
+            Height="40" Margin="468,275,68,89"
+            Style="{StaticResource custombutton}"/>
 
         <!--Button CHANGE-->
         <Button
             Name="btnchng"
             Content="Change status"
-            Height="40" Margin="468,339,68,25"/>
+            Height="40" Margin="468,339,68,25"
+            Style="{StaticResource custombutton}"/>
 
         <!--Button Home-->
         <Button 
             Name="btnhome"
             Content="Home" 
-            Margin="5,5,0,0"
+            Margin="580,0,0,0"
             Height="40" 
             Width="90"
             VerticalAlignment="Top" 
             HorizontalAlignment="Left" 
-            Click="ButtonStronaGłówna"/>
+            Click="ButtonStronaGłówna"
+            Style="{StaticResource custombutton}"/>
 
     </Grid>
 </Window>

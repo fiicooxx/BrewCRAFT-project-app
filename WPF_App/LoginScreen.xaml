@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:WPF_App"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
         Background="WhiteSmoke"
         Title="LoginScreen" Height="550" Width="615">
     <Window.Resources>

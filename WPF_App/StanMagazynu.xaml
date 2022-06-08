@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:WPF_App"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
         Title="StanMagazynu" Height="450" Width="800">
     <Grid>
         <Button Content="Strona główna" Height="34" Margin="239,387,0,0" VerticalAlignment="Top" Width="301" HorizontalAlignment="Left" Click="ButtonStronaGłówna"/>
