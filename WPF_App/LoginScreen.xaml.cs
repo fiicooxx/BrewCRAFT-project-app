@@ -29,13 +29,12 @@ namespace WPF_App
         {
             // --- Filip ---
 
-            SqlConnection connection = new SqlConnection
-                (@"Data Source=...;Initial Catalog=...;Integrated Security=True");
+            //SqlConnection connection = new SqlConnection(@"Data Source=...;Initial Catalog=Magazyn;Integrated Security=True");
 
             // --- Sebastian ---
 
-            //SqlConnection connection = new SqlConnection
-            //   (@"Data Source=...;Initial Catalog=...;Integrated Security=True");
+            SqlConnection connection = new SqlConnection
+               (@"Data Source=LAPTOP-A0MV0IO4;Initial Catalog=Magazyn;Integrated Security=True");
             try
             {
                 if (connection.State == ConnectionState.Closed)
@@ -81,6 +80,7 @@ namespace WPF_App
                 connection.Close();
             }
         }
+
     }
 
 }

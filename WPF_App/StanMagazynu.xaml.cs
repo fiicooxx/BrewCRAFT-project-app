@@ -31,5 +31,10 @@ namespace WPF_App
             this.Visibility = Visibility.Hidden;
             main.Show();
         }
+
+        private void DataGrid_SelectionChanged()
+        {
+
+        }
     }
 }
