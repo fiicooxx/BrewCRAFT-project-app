@@ -51,7 +51,7 @@
             <Image Source="Images/homebutton.jpg"/>
         </Button>
         
-        <DataGrid x:Name="datagrid" HorizontalAlignment="Center" Height="141" Margin="0,61,0,0" VerticalAlignment="Top" Width="418" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <DataGrid x:Name="datagrid" HorizontalAlignment="Center" Height="160" Margin="0,60,0,0" VerticalAlignment="Top" Width="418" d:ItemsSource="{d:SampleData ItemCount=10}"/>
         <Button Content="Załaduj" x:Name="Odśwież" HorizontalAlignment="Left" Height="56" Margin="242,254,0,0" VerticalAlignment="Top" Width="297" Click="Odśwież_Click"/>
 
     </Grid>
