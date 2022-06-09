@@ -115,30 +115,30 @@ namespace WPF_App
                 {
                     connection.Open();
                 }
-                string query = $"SELECT DataZamowienia FROM Dostawy WHERE ID = {comboid.Text}";
+                string query = $"SELECT * FROM Dostawy WHERE ID = {comboid.Text}";
                 SqlCommand command = new SqlCommand(query, connection);
                 SqlDataReader sqlDataReader = command.ExecuteReader();
 
                 while (sqlDataReader.Read())
                 {
-                    //string piwoID = sqlDataReader.GetInt32(1).ToString();
-                    //string DostawcaID = sqlDataReader.GetInt32(2).ToString();
-                    string DataZamowienia = sqlDataReader.GetDateTime(4).ToString();
-                    //string Ilosc = sqlDataReader.GetInt32(4).ToString();
-                    //string Status = sqlDataReader.GetInt32(5).ToString();
+                    string piwoID = sqlDataReader.GetInt32(1).ToString();
+                    string DostawcaID = sqlDataReader.GetInt32(2).ToString();
+                    string DataZamowienia = sqlDataReader.GetDateTime(3).ToString();
+                    string Ilosc = sqlDataReader.GetInt32(4).ToString();
+                    string Status = sqlDataReader.GetInt32(5).ToString();
 
-                    //txtpiwoid.Text = piwoID;
-                    //txtdostawcaid.Text = DostawcaID;
+                    txtpiwoid.Text = piwoID;
+                    txtdostawcaid.Text = DostawcaID;
                     txtdata.Text = DataZamowienia;
-                    //txtilosc.Text = Ilosc;
-                    //txtstatus.Text = Status;
+                    txtilosc.Text = Ilosc;
+                    txtstatus.Text = Status;
                 }
 
                 sqlDataReader.Close();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Whooops!");
+                MessageBox.Show(ex.Message);
             }
             finally
             {
@@ -162,7 +162,7 @@ namespace WPF_App
                 {
                     connection.Open();
                 }
-                string query = $"DELETE FROM Dostawy WHERE ID = {comboid}";
+                string query = "DELETE FROM Dostawy WHERE ID=" + this.comboid.Text;
                 SqlCommand command = new SqlCommand(query, connection);
                 command.ExecuteNonQuery();
                 MessageBox.Show("Successfully removed");
@@ -170,7 +170,7 @@ namespace WPF_App
             }
             catch (Exception)
             {
-                MessageBox.Show("Try again!");
+                MessageBox.Show("Ej, co jest?");
             }
             finally
             {
@@ -179,7 +179,6 @@ namespace WPF_App
         }
         private void Refresh()
         {
-
             // method that refreshes window
             // updating or removing
             MainWindow refresh = new MainWindow();
