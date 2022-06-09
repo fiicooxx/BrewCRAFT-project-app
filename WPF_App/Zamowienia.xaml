@@ -219,7 +219,7 @@
             Name="btnrmv"
             Content="Usuń"
             Height="40" Margin="548,272,42,0"
-            Style="{StaticResource removebutton}" VerticalAlignment="Top"/>
+            Style="{StaticResource removebutton}" VerticalAlignment="Top" Click="Btnrmv_Click"/>
 
         <!--Button Home-->
         <Button           

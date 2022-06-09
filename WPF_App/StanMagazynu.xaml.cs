@@ -59,12 +59,15 @@ namespace WPF_App
 
                 adapter.Update(table);
 
-                connection.Close();
             }
             catch (Exception)
             {
 
                 throw;
+            }
+            finally
+            {
+                connection.Close();
             }
         }
     }
