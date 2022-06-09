@@ -59,11 +59,11 @@ namespace WPF_App
 
             // --- Filip ---
 
-            SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-FOQ5J3H;Initial Catalog=Magazyn;Integrated Security=True");
+            //SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-FOQ5J3H;Initial Catalog=Magazyn;Integrated Security=True");
 
             // --- Sebastian ---
 
-            // SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-A0MV0IO4;Initial Catalog=Magazyn;Integrated Security=True");
+             SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-A0MV0IO4;Initial Catalog=Magazyn;Integrated Security=True");
 
             try
             {
@@ -100,11 +100,11 @@ namespace WPF_App
 
             // --- Filip ---
 
-            SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-FOQ5J3H;Initial Catalog=Magazyn;Integrated Security=True");
+            //SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-FOQ5J3H;Initial Catalog=Magazyn;Integrated Security=True");
 
             // --- Sebastian ---
 
-            // SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-A0MV0IO4;Initial Catalog=Magazyn;Integrated Security=True");
+             SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-A0MV0IO4;Initial Catalog=Magazyn;Integrated Security=True");
 
             try
             {
@@ -148,11 +148,11 @@ namespace WPF_App
         {
             // --- Filip ---
 
-            SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-FOQ5J3H;Initial Catalog=Magazyn;Integrated Security=True");
+            //SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-FOQ5J3H;Initial Catalog=Magazyn;Integrated Security=True");
 
             // --- Sebastian ---
 
-            // SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-A0MV0IO4;Initial Catalog=Magazyn;Integrated Security=True");
+             SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-A0MV0IO4;Initial Catalog=Magazyn;Integrated Security=True");
             try
             {
                 if (connection.State == ConnectionState.Closed)
@@ -192,11 +192,11 @@ namespace WPF_App
 
             // --- Filip ---
 
-            SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-FOQ5J3H;Initial Catalog=Magazyn;Integrated Security=True");
+            //SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-FOQ5J3H;Initial Catalog=Magazyn;Integrated Security=True");
 
             // --- Sebastian ---
 
-            // SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-A0MV0IO4;Initial Catalog=Magazyn;Integrated Security=True");
+             SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-A0MV0IO4;Initial Catalog=Magazyn;Integrated Security=True");
 
             try
             {
@@ -207,6 +207,11 @@ namespace WPF_App
                 string query = "UPDATE Dostawy SET StatusID = 1 WHERE ID =" + this.comboid.Text;
                 SqlCommand command = new SqlCommand(query, connection);
                 command.ExecuteNonQuery();
+
+
+                string querryStan = "UPDATE StanMagazynu SET Ilosc = StanMagazynu.Ilosc + Dostawy.Ilosc FROM StanMagazynu JOIN Dostawy ON StanMagazynu.ID = Dostawy.PiwoID WHERE Dostawy.ID =" + this.comboid.Text;
+                SqlCommand commandStan = new SqlCommand(querryStan, connection);
+                commandStan.ExecuteNonQuery();
                 MessageBox.Show("Zamówienie zrealizowane!");
                 Refresh();
             }

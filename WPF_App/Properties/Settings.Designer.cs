@@ -26,16 +26,6 @@ namespace WPF_App.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-A0MV0IO4;Initial Catalog=Bar2;Integrated Security=True")]
-        public string Bar2ConnectionString {
-            get {
-                return ((string)(this["Bar2ConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-A0MV0IO4;Initial Catalog=Magazyn;Integrated Security=True")]
         public string MagazynConnectionString {
             get {

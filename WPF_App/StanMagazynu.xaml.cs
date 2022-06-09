@@ -38,11 +38,11 @@ namespace WPF_App
         {
             // --- Filip ---
 
-            SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-FOQ5J3H;Initial Catalog=Magazyn;Integrated Security=True");
+            //SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-FOQ5J3H;Initial Catalog=Magazyn;Integrated Security=True");
 
             // --- Sebastian ---
 
-            // SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-A0MV0IO4;Initial Catalog=Magazyn;Integrated Security=True");
+             SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-A0MV0IO4;Initial Catalog=Magazyn;Integrated Security=True");
             try
             {
                 connection.Open();
@@ -58,6 +58,8 @@ namespace WPF_App
                 datagrid.ItemsSource = table.DefaultView;
 
                 adapter.Update(table);
+
+                
 
             }
             catch (Exception)

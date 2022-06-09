@@ -41,6 +41,7 @@ using System.Windows;
 )]
 
 
+
 // Informacje o wersji zestawu zawierają następujące cztery wartości:
 //
 //      Wersja główna
