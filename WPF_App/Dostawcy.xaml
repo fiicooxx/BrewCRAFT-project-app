@@ -37,8 +37,20 @@
             </Setter>
         </Style>
     </Window.Resources>
-    <Grid>
-
+    <Grid Margin="15 15 15 15">
+        <!--Main title-->
+        <TextBlock
+            Margin="25,0"
+            FontSize="30"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top">
+            <Run
+                Text="Brew"/><Run
+                FontWeight="Bold"
+                Text="CRAFT"
+                Foreground="DarkOliveGreen"/>
+        </TextBlock>
+        
         <!--Button Home-->
         <Button           
             Name="btnhome"          
