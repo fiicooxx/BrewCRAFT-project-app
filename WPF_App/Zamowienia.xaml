@@ -212,7 +212,7 @@
             Name="btnchng"
             Content="Zrealizuj"
             Height="40" Margin="548,222,42,0"
-            Style="{StaticResource custombutton}" VerticalAlignment="Top"/>
+            Style="{StaticResource custombutton}" VerticalAlignment="Top" Click="btnchng_Click"/>
 
         <!--Button REMOVE-->
         <Button

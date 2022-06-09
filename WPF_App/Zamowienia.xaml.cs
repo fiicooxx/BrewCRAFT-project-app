@@ -98,9 +98,6 @@ namespace WPF_App
             // here we are going to fill rest of records 
             // relying on our ID
 
-            // here we are going to fill combobox with data
-            // in our case it is ID of order
-
             // --- Filip ---
 
             SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-FOQ5J3H;Initial Catalog=Magazyn;Integrated Security=True");
@@ -185,6 +182,42 @@ namespace WPF_App
             Application.Current.MainWindow = refresh;
             refresh.Show();
             this.Close();
+        }
+
+        // -------------------------------------------------- //
+        private void btnchng_Click(object sender, RoutedEventArgs e)
+        {
+            // here we are going to update status of our order 
+            // relying on our ID
+
+            // --- Filip ---
+
+            SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-FOQ5J3H;Initial Catalog=Magazyn;Integrated Security=True");
+
+            // --- Sebastian ---
+
+            // SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-A0MV0IO4;Initial Catalog=Magazyn;Integrated Security=True");
+
+            try
+            {
+                if (connection.State == ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
+                string query = "UPDATE Dostawy SET StatusID = 1 WHERE ID =" + this.comboid.Text;
+                SqlCommand command = new SqlCommand(query, connection);
+                command.ExecuteNonQuery();
+                MessageBox.Show("Zamówienie zrealizowane!");
+                Refresh();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ooops...");
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
     }
 }
