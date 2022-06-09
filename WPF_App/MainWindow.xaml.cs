@@ -52,5 +52,11 @@ namespace WPF_App
             this.Visibility = Visibility.Hidden;
             zamowienia.Show();
         }
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+
+            Application.Current.Shutdown();
+        }
     }
 }

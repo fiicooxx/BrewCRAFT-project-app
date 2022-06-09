@@ -9,6 +9,36 @@
         ResizeMode="NoResize"
         Title="StanMagazynu" Height="450" Width="800">
     <Window.Resources>
+
+        <Style x:Key="custombutton" TargetType="{x:Type Button}">
+            <Setter Property="MinWidth" Value="100"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Height" Value="60"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Background" Value="DarkOliveGreen"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border
+                            x:Name = "bd"
+                            Background="{TemplateBinding Background}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="20">
+                            <ContentPresenter
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                TextBlock.Foreground="{TemplateBinding Foreground}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bd" Property="Background" Value="#87863E"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
         <Style x:Key="homebutton" TargetType="{x:Type Button}">
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
@@ -61,9 +91,17 @@
             Style="{StaticResource homebutton}">
             <Image Source="Images/homebutton.jpg"/>
         </Button>
-        
-        <DataGrid x:Name="datagrid" HorizontalAlignment="Center" Height="160" Margin="0,60,0,0" VerticalAlignment="Top" Width="418" d:ItemsSource="{d:SampleData ItemCount=10}"/>
-        <Button Content="Załaduj" x:Name="Odśwież" HorizontalAlignment="Left" Height="56" Margin="242,254,0,0" VerticalAlignment="Top" Width="297" Click="Odśwież_Click"/>
+
+        <DataGrid x:Name="datagrid" HorizontalAlignment="Center" Height="220" Margin="0,60,0,0" VerticalAlignment="Top" Width="470" d:ItemsSource="{d:SampleData ItemCount=10}"/>
+        <Button Content="Załaduj" 
+                x:Name="Odśwież" 
+                HorizontalAlignment="Center" 
+                Height="56" 
+                Margin="0,300,0,0" 
+                VerticalAlignment="Top" 
+                Width="300" 
+                Style="{StaticResource custombutton}"
+                Click="Odśwież_Click"/>
 
     </Grid>
 </Window>
