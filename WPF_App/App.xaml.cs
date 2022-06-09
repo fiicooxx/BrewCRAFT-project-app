@@ -13,5 +13,12 @@ namespace WPF_App
     /// </summary>
     public partial class App : Application
     {
+
+        private void App_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+        {
+            // zapis do logów, wyświetlanie własnego okna błędów itp.
+            e.Handled = true;
+        }
+
     }
 }
