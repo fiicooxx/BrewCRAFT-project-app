@@ -26,6 +26,16 @@ namespace WPF_App
             InitializeComponent();
             FillComboBox();
         }
+
+        // --- Filip ---
+
+        //SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-FOQ5J3H;Initial Catalog=Magazyn;Integrated Security=True");
+
+        // --- Sebastian ---
+
+        SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-A0MV0IO4;Initial Catalog=Magazyn;Integrated Security=True");
+
+
         private void ButtonStronaGłówna(object sender, RoutedEventArgs e)
         {
             MainWindow main = new MainWindow();
@@ -57,13 +67,6 @@ namespace WPF_App
             // here we are going to fill combobox with data
             // in our case it is ID of order
 
-            // --- Filip ---
-
-            //SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-FOQ5J3H;Initial Catalog=Magazyn;Integrated Security=True");
-
-            // --- Sebastian ---
-
-             SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-A0MV0IO4;Initial Catalog=Magazyn;Integrated Security=True");
 
             try
             {
@@ -98,13 +101,7 @@ namespace WPF_App
             // here we are going to fill rest of records 
             // relying on our ID
 
-            // --- Filip ---
-
-            //SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-FOQ5J3H;Initial Catalog=Magazyn;Integrated Security=True");
-
-            // --- Sebastian ---
-
-             SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-A0MV0IO4;Initial Catalog=Magazyn;Integrated Security=True");
+            
 
             try
             {
@@ -146,13 +143,7 @@ namespace WPF_App
         // -------------------------------------------------- //
         private void Btnrmv_Click(object sender, RoutedEventArgs e)
         {
-            // --- Filip ---
-
-            //SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-FOQ5J3H;Initial Catalog=Magazyn;Integrated Security=True");
-
-            // --- Sebastian ---
-
-             SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-A0MV0IO4;Initial Catalog=Magazyn;Integrated Security=True");
+           
             try
             {
                 if (connection.State == ConnectionState.Closed)
@@ -190,13 +181,7 @@ namespace WPF_App
             // here we are going to update status of our order 
             // relying on our ID
 
-            // --- Filip ---
-
-            //SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-FOQ5J3H;Initial Catalog=Magazyn;Integrated Security=True");
-
-            // --- Sebastian ---
-
-             SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-A0MV0IO4;Initial Catalog=Magazyn;Integrated Security=True");
+           
 
             try
             {
