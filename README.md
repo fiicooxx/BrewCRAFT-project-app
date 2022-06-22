@@ -1,9 +1,8 @@
-# BrewCRAFT / project-app
+# BrewCRAFT / school-project
 
-Warehouse management project application
+Warehouse management school project application
 ## About us!
-Hi! 👋 We are students of Computer Science from WSEI Kraków who have just started their journey with C#, xaml and SQL. 
-This is our first project application in WPF. Check this out! 
+Hi! 👋 This is a simple demonstration of database based application that lets you store and update data in database with the help of stored procedures.
 ## About the project
 The main intetnion was to have some fun with creating UI in xaml and understanding the logic of buttons, events.
 We have learned how to connect a database to a WPF app on .NET and make simple operations on queries.
