@@ -1,7 +1,7 @@
 # BrewCRAFT / school-project
 
 Warehouse management school project application
-## About us!
+## Description
 Hi! 👋 This is a simple demonstration of database based application that lets you store and update data in database with the help of stored procedures.
 ## About the project
 The main intetnion was to have some fun with creating UI in xaml and understanding the logic of buttons, events.
