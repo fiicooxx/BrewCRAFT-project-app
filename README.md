@@ -1,6 +1,6 @@
-# BrewCRAFT / school-project
+# BrewCRAFT / project
 
-Warehouse management school project application
+Warehouse management project application
 ## Description
 This is a simple demonstration of database based application that lets you store and update data in database with the help of stored procedures.
 ## About the project
