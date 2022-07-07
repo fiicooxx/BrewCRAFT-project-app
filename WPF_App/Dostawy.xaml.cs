@@ -25,15 +25,7 @@ namespace WPF_App
         {
             InitializeComponent();
         }
-
-        // --- Filip ---
-
-        SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-FOQ5J3H;Initial Catalog=Magazyn;Integrated Security=True");
-
-        // --- Sebastian ---
-
-        //SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-A0MV0IO4;Initial Catalog=Magazyn;Integrated Security=True");
-
+        SqlConnection connection = new SqlConnection(Helper.connection);
         private void ButtonStronaGłówna(object sender, RoutedEventArgs e)
         {
             MainWindow main = new MainWindow();
