@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:WPF_App"
              DispatcherUnhandledException="App_DispatcherUnhandledException"
-             StartupUri="LoginScreen.xaml">
+             StartupUri="Windows/LoginScreen.xaml">
     <Application.Resources>
          
     </Application.Resources>
