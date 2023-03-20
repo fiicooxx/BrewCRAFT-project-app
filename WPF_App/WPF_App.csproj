@@ -71,37 +71,37 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Dostawcy.xaml.cs">
+    <Compile Include="Windows\Dostawcy.xaml.cs">
       <DependentUpon>Dostawcy.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Dostawy.xaml.cs">
+    <Compile Include="Windows\Dostawy.xaml.cs">
       <DependentUpon>Dostawy.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Helper.cs" />
+    <Compile Include="Helper\Helper.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="StanMagazynu.xaml.cs">
+    <Compile Include="Windows\StanMagazynu.xaml.cs">
       <DependentUpon>StanMagazynu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Zamowienia.xaml.cs">
+    <Compile Include="Windows\Zamowienia.xaml.cs">
       <DependentUpon>Zamowienia.xaml</DependentUpon>
     </Compile>
-    <Page Include="Dostawcy.xaml">
+    <Page Include="Windows\Dostawcy.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Dostawy.xaml">
+    <Page Include="Windows\Dostawy.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="LoginScreen.xaml">
+    <Page Include="Windows\LoginScreen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -109,18 +109,18 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="LoginScreen.xaml.cs">
+    <Compile Include="Windows\LoginScreen.xaml.cs">
       <DependentUpon>LoginScreen.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="StanMagazynu.xaml">
+    <Page Include="Windows\StanMagazynu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Zamowienia.xaml">
+    <Page Include="Windows\Zamowienia.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

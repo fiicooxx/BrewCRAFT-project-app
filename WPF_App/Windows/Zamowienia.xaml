@@ -116,8 +116,8 @@
             FontSize="30"
             HorizontalAlignment="Center">
             <Run
-                Text="Wyświetl "/><Run
-                Text="zamówienie"
+                Text="Show the "/><Run
+                Text="order"
                 FontWeight="SemiBold"
                 Foreground="DarkOliveGreen"/>
         </TextBlock>
@@ -145,7 +145,7 @@
             VerticalContentAlignment="Center"
             Name="txtpiwoid"
             FontSize="18"
-            Text="Piwo"
+            Text="Beer"
             Foreground="DarkGray"
             GotFocus="TextBox_GotFocus"
             LostFocus="TextBox_LostFocus">
@@ -159,7 +159,7 @@
             VerticalContentAlignment="Center"
             Name="txtdostawcaid"
             FontSize="18"
-            Text="Dostawca"
+            Text="Supplier"
             Foreground="DarkGray"
             GotFocus="TextBox_GotFocus"
             LostFocus="TextBox_LostFocus">
@@ -187,7 +187,7 @@
             VerticalContentAlignment="Center"
             Name="txtilosc"
             FontSize="18"
-            Text="Ilość"
+            Text="Amount"
             Foreground="DarkGray"
             GotFocus="TextBox_GotFocus"
             LostFocus="TextBox_LostFocus">
@@ -210,14 +210,14 @@
         <!--Button CHANGE-->
         <Button
             Name="btnchng"
-            Content="Zrealizuj"
+            Content="Submit"
             Height="40" Margin="548,222,42,0"
             Style="{StaticResource custombutton}" VerticalAlignment="Top" Click="btnchng_Click"/>
 
         <!--Button REMOVE-->
         <Button
             Name="btnrmv"
-            Content="Usuń"
+            Content="Remove"
             Height="40" Margin="548,272,42,0"
             Style="{StaticResource removebutton}" VerticalAlignment="Top" Click="Btnrmv_Click"/>
 

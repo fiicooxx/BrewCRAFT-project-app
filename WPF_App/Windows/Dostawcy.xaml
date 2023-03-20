@@ -93,7 +93,7 @@
         </Button>
 
         <DataGrid x:Name="datagrid" HorizontalAlignment="Center" Height="220" Margin="0,60,0,0" VerticalAlignment="Top" Width="470" d:ItemsSource="{d:SampleData ItemCount=10}"/>
-        <Button Content="Załaduj" 
+        <Button Content="Load" 
                 x:Name="Odśwież" 
                 HorizontalAlignment="Center" 
                 Height="56" 

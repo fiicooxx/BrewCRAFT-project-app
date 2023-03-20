@@ -63,19 +63,19 @@
                 HorizontalAlignment="Center"
                 FontSize="25">
                 <Run
-                    Text="Magazyn "/><Run
+                    Text="Welcome to "/><Run
                     Text="Brew"
                     FontWeight="SemiBold"/><Run
                     Text="CRAFT"
                     Foreground="DarkOliveGreen"
                     FontWeight="Bold"
                     x:Name="userName"/><Run
-                    Text=" wita!"/>
+                    Text="!"/>
             </TextBlock>
 
             <Grid
                 Grid.Row="1">
-                <Button Content="Stan Magazynu" 
+                <Button Content="Warehouse" 
                         Height="45" 
                         Width="300" 
                         Style="{StaticResource allbuttons}"
@@ -84,7 +84,7 @@
 
             <Grid
                 Grid.Row="2">
-                <Button Content="Dodaj zamówienie" 
+                <Button Content="New order" 
                         Height="45" 
                         Width="300" 
                         Style="{StaticResource allbuttons}"
@@ -93,7 +93,7 @@
 
             <Grid
                 Grid.Row="3">
-                <Button Content="Nasi dostawcy" 
+                <Button Content="Our suppliers" 
                         Height="45" 
                         Width="300" 
                         Style="{StaticResource allbuttons}"
@@ -102,7 +102,7 @@
 
             <Grid
                 Grid.Row="4">
-                <Button Content="Wyświetl zamówienie" 
+                <Button Content="Order view" 
                         Height="45" 
                         BorderThickness="2"
                         Width="300" 
